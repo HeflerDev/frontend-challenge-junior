@@ -14,19 +14,20 @@ const browserSync = require('browser-sync').create()
 
 const files = {
   jsPath: 'src/**/*.js',
-  sassPath: 'src/**/*.scss',
-  htmlPath: 'src/*.html'
+  sassPath: 'src/scss/**/*.scss',
+  htmlPath: 'src/*.html',
+  cssPath: 'src/css'
 }
 
 function sassTask() {
   return src(files.sassPath)
-    .pipe(gulpSourcemaps.init())
+    .pipe(src('src/**/*.scss'))
     .pipe(gulpSass())
-    .pipe(gulpPostcss([ autoprefixer(), cssnano() ]))
-    .pipe(gulpSourcemaps.write('.'))
-    .pipe(dest('dist')
+    .pipe(dest('src/css')
   );
 }
+
+
 
 function jsTask() {
   return src([files.jsPath])

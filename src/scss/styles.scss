@@ -1,7 +1,6 @@
-@import './fonts.scss';
+@import './_fonts.scss';
+@import './variables.scss';
+
 $font-primary: 'playfair-display', serif;
 $font-secondary: 'pt-sans', sans-serif;
 
-body {
-  background-color: red;
-}
