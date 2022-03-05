@@ -27,8 +27,6 @@ function sassTask() {
   );
 }
 
-
-
 function jsTask() {
   return src([files.jsPath])
     .pipe(gulpConcat('all.js'))
@@ -68,7 +66,6 @@ function watchTask(){
 
 exports.default = series(
   sassTask,
-  jsTask,
   browsersyncServe,
   watchTask
 )
