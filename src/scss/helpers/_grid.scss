@@ -1,0 +1,31 @@
+$grid-columns: 12;
+
+_board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through $grid-columns {
+  _col-#{$i} {
+    flex-basis:round-width($i);
+    max-width:round-width($i);
+  }
+}
+
+@media (min-device-width: 768px) {
+  @for $i from 1 through $grid-columns {
+    _col-m-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+}
+
+@media (min-device-width: 1024px) {
+  @for $i from 1 through $grid-columns {
+    _col-l-#{$i} {
+      flex-basis: round-width($i);
+      max-width: round-width($i);
+    }
+  }
+}

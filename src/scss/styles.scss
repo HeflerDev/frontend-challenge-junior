@@ -1,5 +1,8 @@
-@import './_fonts.scss';
-@import './_variables.scss';
+@import 'helpers/_fonts.scss';
+@import 'helpers/_variables.scss';
+@import 'helpers/_grid.scss';
+
+@import 'main-navbar.scss';
 
 $font-primary: 'playfair-display', serif;
 $font-secondary: 'pt-sans', sans-serif;
